@@ -94,6 +94,7 @@ export function CsvUpload() {
       setError(null);
 
       console.log("File uploaded and downloaded successfully");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       if (error.response) {
         // The request was made and the server responded with a status code
