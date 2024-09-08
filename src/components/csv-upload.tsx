@@ -74,7 +74,7 @@ export function CsvUpload() {
     try {
       // Make the POST request to upload the file
       const response = await axios.post(
-        "http://localhost:3000/api/upload",
+        "https://inner-melanie-circuit-issh-626f3b5c.koyeb.app/",
         formData,
         {
           headers: {
