@@ -103,11 +103,15 @@ export function CsvUpload() {
           const reader = new FileReader();
           reader.onload = () => {
             try {
-              const errorData = JSON.parse(reader.result);
-              setError(
-                errorData.error ||
-                  "Failed to upload file or download the result. Please try again."
-              );
+              if (typeof reader.result === "string") {
+                const errorData = JSON.parse(reader.result);
+                setError(
+                  errorData.error ||
+                    "Failed to upload file or download the result. Please try again."
+                );
+              } else {
+                setError("Unexpected response format. Please try again.");
+              }
             } catch (parseError) {
               setError("Failed to parse error response. Please try again.");
             }
