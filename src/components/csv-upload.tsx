@@ -52,17 +52,6 @@ export function CsvUpload() {
     setError(null);
   };
 
-  // const handleUpload = async () => {
-  //   if (!file) return;
-  //   setIsUploading(true);
-  //   // Simulating upload process
-
-  //   await new Promise((resolve) => setTimeout(resolve, 2000));
-  //   setIsUploading(false);
-  //   // Handle actual upload logic here
-  //   console.log("File uploaded:", file.name);
-  // };
-
   const handleUpload = async () => {
     if (!file) return;
 
