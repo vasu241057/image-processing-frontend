@@ -158,10 +158,6 @@ export function CsvUpload() {
 
       <main className="flex-grow container mx-auto px-4 py-8 flex items-center justify-center">
         <Card className="w-full max-w-md p-6 space-y-6">
-          <div className="flex justify-center">
-            <Upload size={48} className="text-primary" />
-          </div>
-
           <div
             onDrop={handleDrop}
             onDragOver={(e) => e.preventDefault()}
@@ -187,6 +183,10 @@ export function CsvUpload() {
                 Browse
               </Button>
             </label>
+          </div>
+
+          <div className="flex justify-center">
+            <Upload size={48} className="text-primary" />
           </div>
 
           {file && (
